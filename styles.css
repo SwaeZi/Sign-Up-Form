@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 1000px;
+    width: auto;
+    background-color: #000;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+img {
+    height: 800px;
+    width: auto;
+}
+input {
+    border: 1px solid #000;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 5px;
+}
+input:invalid {
+    border-color: red;
+}
+
+input:valid {
+    border-color: green;
+}
+
+input:focus {
+    
+}
+
+#mainContainer {
+    display: -webkit-flex;
+    display: flex;
+    margin: 5rem;
+    background-color: aliceblue;
+}
+
+#imgContainer {
+    display: block;
+    margin: 0%;
+}
+
+#formContainer {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+}
+
+#heading {
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: rgb(246, 246, 246);
+}
+
+#form {
+    margin-top: 2rem;
+    border: none;
+    
+
+}
+
+.signup {
+    color: rgb(146, 0, 237);
+}
