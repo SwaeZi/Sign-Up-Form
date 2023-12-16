@@ -8,21 +8,24 @@
 </head>
 <body>
     <form action="https://httpbin.org/post" method="post">
-        <fieldset></fieldset>
-        <label for="first_name">First Name</label>
-        <input type="text" id="first_name" name="first_name" placeholder="Bob">
-        <label for="last_name">Last Name</label>
-        <input type="text" id="last_name" name="last_name" placeholder="Smith">
-        <label for="email">Email</label>
-        <input type="text" id="email" name="email" placeholder="email@mail.com">
-        <label for="phone_number">Phone Number</label>
-        <input type="text" name="phone_number" id="phone_number">
-        <label for="user_password">Password</label>
-        <input type="password" id="user_password" name="password">
+        <fieldset>
+            <legend>Create an Account</legend>
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name" placeholder="Bob" minlength="3" maxlength="140" required>
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Smith" minlength="3" maxlength="140" required>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="email@mail.com" required>
+            <label for="phone_number">Phone Number</label>
+            <input type="text" name="phone_number" id="phone_number" pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}">
+            <label for="user_password">Password</label>
+            <input type="password" id="user_password" name="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+            <label for="user_passwordconfirm">Confirm Password</label>
+            <input type="password" id="user_passwordconfirm" name="password_confirm" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required >
         </fieldset>
-        <button type="submit">Create Account</button>
-        <span>Already have an account?</span>
-        <button type="button">Log in</button>
+            <button type="submit">Create Account</button>
+            <span>Already have an account?</span>
+            <button type="button">Log in</button>
     </form>
     
 </body>
